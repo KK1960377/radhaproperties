@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+body { font-family: 'Manrope', sans-serif; }
+.font-display { font-family: 'Fraunces', serif; }
+
+::selection { background: #C9A24B; color: #0B0B0D; }
+
+.card-hover { transition: transform .4s cubic-bezier(.16,1,.3,1), box-shadow .4s ease; }
+.card-hover:hover { transform: translateY(-8px); box-shadow: 0 30px 60px -20px rgba(0,0,0,.25); }
+
+.underline-grow { position: relative; }
+.underline-grow::after { content: ''; position: absolute; left: 0; bottom: -4px; height: 2px; width: 0; background: #C9A24B; transition: width .3s ease; }
+.underline-grow:hover::after { width: 100%; }
+
+@keyframes floaty { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+.float { animation: floaty 4s ease-in-out infinite; }
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
